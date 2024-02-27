@@ -17,12 +17,10 @@ class EstimationBloc extends Bloc<EstimationEvent, EstimationState> {
         emit(EstimationFetching());
         await Future.delayed(const Duration(milliseconds: 200));
         try {
-          print('Event Name ist : $event.name');
           User userData =
               await estimationRepository.getEstimationForUser(name: event.name);
           emit(EstimationFetched(userData));
         } catch (e) {
-          print(e);
           emit(EstimationError(e.toString()));
         }
       },

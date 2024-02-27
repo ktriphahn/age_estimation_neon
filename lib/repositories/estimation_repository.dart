@@ -9,12 +9,10 @@ class EstimationRepository {
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> userData = json.decode(response.body);
-      print(userData);
       final User user = User(
           count: userData['count'] as int,
           name: userData['name'] as String,
           age: userData['age'] as int);
-      print(user);
       return user;
     } else {
       throw Exception(

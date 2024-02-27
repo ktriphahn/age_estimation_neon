@@ -18,8 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _nameController = TextEditingController();
 
   void _submitEstimate(context) {
-    print('--------------Sende Daten an API------------');
-    print(_nameController.text.trim());
     BlocProvider.of<EstimationBloc>(context)
         .add(GetUserData(_nameController.text.trim()));
   }

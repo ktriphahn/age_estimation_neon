@@ -73,7 +73,6 @@ class Home extends StatelessWidget {
                 );
               } else if (state is EstimationFetched) {
                 // user an den Homescreen übergeben, wenn der state loaded ist
-                print('USERDATA WIRD JETZT AN HOMESCREEN ÜBERGEBEN');
                 return HomeScreen(user: state.user);
               }
               return const HomeScreen();
