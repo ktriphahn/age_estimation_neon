@@ -7,6 +7,6 @@ The app features the following functions:
 * entering the name of a person
 * sending the name to the agify api
 * desplay the result
-*restart the process
+* restart the process
 
 Flutter BLoC was used as the state-management solution of this app.
