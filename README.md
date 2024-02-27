@@ -10,3 +10,5 @@ The app features the following functions:
 * restart the process
 
 Flutter BLoC was used as the state-management solution of this app.
+
+The app is designed in dark mode.
