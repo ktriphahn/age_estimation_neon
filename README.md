@@ -1,16 +1,14 @@
 # age_estimation_neon
 
-A new Flutter project.
+A small Flutter project to estimate a users age by his / her name using the agify.io (https://agify.io/) API.
 
-## Getting Started
+The app features the following functions:
 
-This project is a starting point for a Flutter application.
+* entering the name of a person
+* sending the name to the agify api
+* desplay the result
+* restart the process
 
-A few resources to get you started if this is your first Flutter project:
+Flutter BLoC was used as the state-management solution of this app.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app is designed in dark mode.
