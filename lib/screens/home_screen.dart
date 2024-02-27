@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () {
                     _reset(context);
                   },
-                  child: const Text('Reset'),
+                  child: const Text('Zurücksetzen'),
                 ),
                 ElevatedButton(
                   child: const Text('Alter schätzen'),
