@@ -68,8 +68,8 @@ class Home extends StatelessWidget {
                   child: CircularProgressIndicator(),
                 );
               } else if (state is EstimationError) {
-                return const Center(
-                  child: Text('Fehler beim Laden der Daten'),
+                return Center(
+                  child: Text(state.error),
                 );
               } else if (state is EstimationFetched) {
                 // user an den Homescreen übergeben, wenn der state loaded ist

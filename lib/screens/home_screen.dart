@@ -76,14 +76,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text('Alter schätzen'),
                   onPressed: () {
                     if (_nameController.text.trim().length > 2 &&
-                        _nameController.text.trim().length <= 50) {
+                        _nameController.text.trim().length <= 50 &&
+                        double.tryParse(_nameController.text.trim()) == null) {
                       _submitEstimate(context);
                     } else {
+                      String snackbarText;
+                      if (double.tryParse(_nameController.text.trim()) !=
+                          null) {
+                        snackbarText =
+                            'Bitte keine Zahlen eingeben. Versuchen Sie es mit einem validen Namen erneut.';
+                      } else {
+                        snackbarText =
+                            'Bitte Nutzernamen mit mindestens 3 Buchstaben eingeben.';
+                      }
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text(
-                              'Bitte Nutzernamen mit mindestens 3 Buchstaben eingeben.'),
-                          duration: Duration(seconds: 1),
+                        SnackBar(
+                          content: Text(snackbarText),
+                          duration: const Duration(seconds: 1),
                         ),
                       );
                     }
